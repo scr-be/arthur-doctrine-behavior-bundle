@@ -1,0 +1,22 @@
+---
+
+imports:
+    - { resource: ../../../.config/testers/symfony/config/base.yml }
+    - { resource: ../../../.config/testers/symfony/config/framework.yml }
+    - { resource: ../../../.config/testers/symfony/config/doctrine.yml }
+    - { resource: ../../../.config/testers/symfony/config/security.yml }
+    - { resource: ../../../.config/testers/symfony/config/monolog.yml }
+
+doctrine :
+    dbal :
+        default_connection : default
+
+        types :
+            str_uuid:
+                class     : Scribe\Doctrine\DBAL\Types\StringUuidType
+                commented : true
+            bin_uuid:
+                class     : Scribe\Doctrine\DBAL\Types\BinaryUuidType
+                commented : true
+
+...

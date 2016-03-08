@@ -1,0 +1,64 @@
+{
+    "name"        : "scr-be/arthur-doctrine-behavior-bundle",
+    "license"     : "MIT",
+    "type"        : "project",
+    "homepage"    : "https://scr.be/arthur-doctrine-behavior-bundle",
+    "description" : "This library contains a collections of common utilities and helpers for use throughout the other arthur-* libraries and bundles.",
+    "support" : {
+        "email"  : "rmf@scr.be",
+        "issues" : "https://arthur-doctrine-behavior-bundle.oss.scr.be/issues",
+        "source" : "https://arthur-doctrine-behavior-bundle.oss.scr.be/git",
+        "irc"    : "irc://irc.efnet.org/scribe"
+    },
+    "keywords"   : [
+        "arthur-doctrine-behavior-bundle", "doctrine", "behavior", "bundle", "rmf", "scr.be", "scribe"
+    ],
+    "authors"    : [
+        {
+            "name"    : "Rob Frawley 2nd",
+            "email"   : "rmf@scr.be",
+            "homepage": "https://scr.be/rmf",
+            "role"    : "Project Lead"
+        }
+    ],
+    "require" : {
+        "php"                                 : "~5.6|~7.0",
+        "scr-be/wonka-bundle"                 : "~0.5",
+        "scr-be/arthur-doctrine-library"      : "~0.5",
+        "scr-be/arthur-doctrine-uuid-library" : "~0.5",
+        "symfony/dependency-injection"        : "~2.8|~3.0",
+        "doctrine/doctrine-bundle"            : "~1.6"
+    },
+    "require-dev" : {
+        "scr-be/arthur-doctrine-fixtures-bundle" : "~0.5",
+        "symfony/symfony"                        : "~2.8|~3.0",
+        "symfony/framework-bundle"               : "~2.8|~3.0",
+        "symfony/var-dumper"                     : "~2.8|~3.0",
+        "symfony/debug-bundle"                   : "~2.8|~3.0",
+        "symfony/phpunit-bridge"                 : "~2.8|~3.0",
+        "symfony/monolog-bundle"                 : "~2.8|~3.0",
+        "phpunit/phpunit"                        : "~5.0",
+        "codacy/coverage"                        : "~1.0",
+        "satooshi/php-coveralls"                 : "~1.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Scribe\\Arthur\\DoctrineBehaviorBundle\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Scribe\\Arthur\\DoctrineBehaviorBundle\\Tests\\" : "tests/"
+        }
+    },
+    "minimum-stability" : "dev",
+    "prefer-stable"     : true,
+    "config": {
+        "bin-dir" : "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master" : "0.1-dev"
+        }
+    }
+}

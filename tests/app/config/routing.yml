@@ -1,0 +1,7 @@
+---
+
+s.mantle.redirects :
+    resource : .
+    type     : s.mantle.redirects
+
+...

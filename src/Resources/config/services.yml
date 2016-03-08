@@ -1,0 +1,32 @@
+---
+
+parameters :
+
+    s.arthur_doctrine_behavior.timestampable.subscriber.class : Scribe\Arthur\DoctrineBehaviorBundle\Subscriber\Timestampable\TimestampableSubscriber
+    s.arthur_doctrine_behavior.slugable.subscriber.class   : Scribe\Arthur\DoctrineBehaviorBundle\Subscriber\Slugable\SlugableSubscriber
+
+services :
+
+    s.arthur_doctrine_behavior.abstract.subscriber :
+        abstract : true
+        calls :
+            - [ setAnalyser, [ '@s.wonka.reflection_analyser' ] ]
+            - [ setLogger,   [ '@s.wonka.invokable_logger'    ] ]
+
+    s.arthur_doctrine_behavior.timestampable.subscriber :
+        parent    : s.arthur_doctrine_behavior.abstract.subscriber
+        class     : %s.arthur_doctrine_behavior.timestampable.subscriber.class%
+        arguments :
+            - %s.arthur_doctrine_behavior.subscribers_enable.timestampable%
+        tags :
+            - { name : doctrine.event_subscriber }
+
+    s.arthur_doctrine_behavior.slugable.subscriber :
+        parent    : s.arthur_doctrine_behavior.abstract.subscriber
+        class     : %s.arthur_doctrine_behavior.slugable.subscriber.class%
+        arguments :
+            - %s.arthur_doctrine_behavior.subscribers_enable.slugable%
+        tags :
+            - { name : doctrine.event_subscriber }
+
+...

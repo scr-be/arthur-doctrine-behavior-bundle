@@ -1,0 +1,15 @@
+
+##
+# This file is part of `scr-be/arthur-doctrine-utils-library`
+#
+# (c) Rob Frawley 2nd <rmf@src.run>
+#
+# For the full copyright and license information, view the LICENSE.md
+# file distributed with this source code.
+##
+
+# Ignore all files by default, with exclusions for the select files.
+*
+!.gitignore
+
+# EOF
